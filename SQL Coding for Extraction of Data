@@ -1,0 +1,6 @@
+SELECT id, g.group, country, gender, join_dt, g.device, spent
+ FROM users u
+ INNER JOIN groups g
+ ON u.id = g.uid
+ LEFT JOIN activity a
+ ON a.uid = g.uid
